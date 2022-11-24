@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <router-view />
-
   </div>
 </template>
 
@@ -12,5 +11,8 @@
 }
 body {
   background-color: rgb(29, 51, 55);
+
 }
+
+
 </style>
