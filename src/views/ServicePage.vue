@@ -1,10 +1,10 @@
 <template>
   <div>
     <page-header></page-header>
+
     <h1>My Craft</h1>
 
     <p>
-        
       I have had a chance at exploring many aspects of web development. Recently
       graduating from an accelerated diploma program on full-stack development.
       Here are some of the skills I have focused on.
@@ -48,6 +48,7 @@
 
 <script>
 import PageHeader from "@/components/PageHeader.vue";
+
 export default {
   components: {
     PageHeader,
@@ -57,7 +58,6 @@ export default {
 
 <style lang="scss" scoped>
 div {
-  display: grid;
   text-align: center;
   justify-items: center;
   color: white;
@@ -76,6 +76,7 @@ div {
     display: grid;
     grid-template-columns: auto;
     row-gap: 15px;
+    padding-bottom: 20px;
     > ul,
     li {
       font-size: 1.2rem;

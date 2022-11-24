@@ -21,7 +21,7 @@ import MyProjects from "@/components/MyProjects.vue"
 
 <style lang="scss" scoped>
 div{
-      display: grid;
+
     justify-items: center;
     text-align: center;
 

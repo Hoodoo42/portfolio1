@@ -2,14 +2,27 @@
   <div>
     <header id="logo">
       <img src="@/assets/cmvlogo.png" alt="cmvdev stamp logo" />
-      <social-icons></social-icons>
+      <!-- desktop nav -->
+      <div id="desktop_nav">
+      
+          <router-link to="/">Home</router-link>
+          <router-link to="/about">About Me</router-link>
+
+          <router-link to="/portfolio">My Work</router-link>
+          <router-link to="/service">My Craft</router-link>
+
+      </div>
+      <!-- social icons -->
+      <social-icons id="socials"></social-icons>
     </header>
+    <!-- hamburger menu icon -->
     <img
       id="ham"
       @click="open_menu"
       src="@/assets/hamburger.png"
       alt="3 goldish lines stacked"
     />
+    <!-- mobile nav -->
     <nav id="mobile_nav">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About Me</router-link>
@@ -20,10 +33,10 @@
 </template>
 
 <script>
-import SocialIcons from "@/components/SocialIcons.vue"
+import SocialIcons from "@/components/SocialIcons.vue";
 export default {
-    name: "page-header",
-  components:{
+  name: "page-header",
+  components: {
     SocialIcons,
   },
 
@@ -39,8 +52,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#desktop_nav, #socials {
+  display: none;
+}
 div {
-  display: grid;
   place-items: center;
   text-align: center;
 
@@ -76,6 +91,38 @@ div {
     justify-self: center;
     padding-top: 25px;
     top: 20px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  div {
+    #logo {
+      height: 160px;
+      padding-bottom: 40px;
+      > img {
+        width: 25%;
+      }
+      > #desktop_nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        > a, a:link{
+          color: brown;
+          font-size: 1.5rem;
+          text-decoration: none;
+        }
+      }
+    >#socials{
+      display: grid;
+      grid-template-columns: auto;
+      place-items: end;
+      padding-top: 20px;
+      padding-right: 15px;
+    }
+    }
+
+    #ham {
+      display: none;
+    }
   }
 }
 </style>
