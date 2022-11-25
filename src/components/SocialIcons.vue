@@ -19,8 +19,12 @@
         src="@/assets/facebook.png"
         alt="facebook logo in a graphic art style badge"
       />
-      <img 
-      id="email" @click="email" src="@/assets/email.png" alt="email icon">
+      <img
+        id="email"
+        @click="email"
+        src="@/assets/email.png"
+        alt="email icon"
+      />
     </div>
   </div>
 </template>
@@ -39,9 +43,9 @@ export default {
     fb() {
       window.open("https://www.facebook.com/cmvdev");
     },
-    email(){
+    email() {
       window.location.href = "mailto:colleen@cmvdev.io";
-    }
+    },
   },
 };
 </script>

@@ -51,21 +51,19 @@ export default {
       height: 125px;
     }
     > #home_icons {
-    display: none;
-
+      display: none;
     }
   }
 }
 @media only screen and (min-width: 600px) {
-  #wrapper >#hi {
+  #wrapper > #hi {
     > #home_icons {
-    display: grid;
-    width: 530px;
-    position: relative;
-    left: 30px;
-    margin: auto;
+      display: grid;
+      width: 530px;
+      position: relative;
+      left: 30px;
+      margin: auto;
+    }
   }
-}
-
 }
 </style>
