@@ -4,16 +4,15 @@
       <img src="@/assets/cmvlogo.png" alt="cmvdev stamp logo" />
       <!-- desktop nav -->
       <div id="desktop_nav">
-      
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About Me</router-link>
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About Me</router-link>
 
-          <router-link to="/portfolio">My Work</router-link>
-          <router-link to="/service">My Craft</router-link>
-
+        <router-link to="/portfolio">My Work</router-link>
+        <router-link to="/service">My Craft</router-link>
       </div>
       <!-- social icons -->
-      <social-icons id="socials"></social-icons>
+      <social-icons id="tablet_socials"></social-icons>
+      <social-icons id="mobile_socials"></social-icons>
     </header>
     <!-- hamburger menu icon -->
     <img
@@ -52,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#desktop_nav, #socials {
+#desktop_nav {
   display: none;
 }
 div {
@@ -60,7 +59,7 @@ div {
   text-align: center;
 
   > #mobile_nav {
-    display: grid;
+    // display: grid;
     grid-template-rows: auto;
     width: 100%;
     row-gap: 20px;
@@ -100,29 +99,34 @@ div {
       height: 160px;
       padding-bottom: 40px;
       > img {
-        width: 25%;
+        width: 200px;
       }
       > #desktop_nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        > a, a:link{
+        > a,
+        a:link {
           color: brown;
           font-size: 1.5rem;
           text-decoration: none;
         }
       }
-    >#socials{
-      display: grid;
-      grid-template-columns: auto;
-      place-items: end;
-      padding-top: 20px;
-      padding-right: 15px;
-    }
+
+      > #mobile_nav {
+        display: none;
+      }
     }
 
     #ham {
       display: none;
     }
+  }
+}
+@media only screen and (min-width: 900px) {
+  #desktop_nav {
+    width: 70%;
+    position: relative;
+    left: 15%;
   }
 }
 </style>

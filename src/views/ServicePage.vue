@@ -43,15 +43,17 @@
         </ul>
       </section>
     </div>
+    <page-footer></page-footer>
   </div>
 </template>
 
 <script>
 import PageHeader from "@/components/PageHeader.vue";
-
+import PageFooter from "@/components/PageFooter.vue";
 export default {
   components: {
     PageHeader,
+    PageFooter,
   },
 };
 </script>
@@ -60,10 +62,14 @@ export default {
 div {
   text-align: center;
   justify-items: center;
-  color: white;
+
   > h1,
   p {
     padding: 15px;
+    color: white;
+    position: relative;
+    width: 70%;
+    left: 15%;
   }
   p {
     font-size: 1.2rem;
@@ -71,12 +77,18 @@ div {
   }
   ul {
     list-style-type: none;
+    color: white;
   }
   > #skills {
     display: grid;
-    grid-template-columns: auto;
+    // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
     row-gap: 15px;
     padding-bottom: 20px;
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: 35px;
     > ul,
     li {
       font-size: 1.2rem;
@@ -92,6 +104,11 @@ div {
     #ss h3 {
       color: rgb(27, 167, 132);
     }
+  }
+}
+@media only screen and (min-width: 900px) {
+  div #skills {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 </style>
