@@ -19,7 +19,7 @@ section {
   grid-template-columns: 1fr 1fr;
   background-color: white;
   padding: 20px;
-  margin-top: 250px;
+  margin-top: 25px;
 
   > p {
     justify-self: right;
@@ -28,6 +28,6 @@ section {
   > a {
     justify-self: left;
   }
-  margin-left: 10px;
+
 }
 </style>

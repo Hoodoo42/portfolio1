@@ -108,6 +108,7 @@ div {
 }
 @media only screen and (min-width: 900px) {
   div #skills {
+    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }

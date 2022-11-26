@@ -42,6 +42,7 @@ export default {
     position: relative;
     top: 75px;
     color: white;
+    height: 100vh;
     > h3 {
       padding: 15px;
       line-height: 1.7;

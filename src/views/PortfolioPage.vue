@@ -30,6 +30,7 @@ div {
   justify-items: center;
   text-align: center;
 
+
   > h1,
   p {
     padding: 15px;

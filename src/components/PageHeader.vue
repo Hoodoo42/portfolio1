@@ -45,6 +45,8 @@ export default {
       ham.style.display = "none";
       let nav = document.getElementById("mobile_nav");
       nav.style.display = "grid";
+
+      this.$root.$on
     },
   },
 };
