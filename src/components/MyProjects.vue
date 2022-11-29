@@ -41,15 +41,15 @@ div {
     > img {
       width: 40%;
       border: 1px solid black;
-}
-    h2{
-        color: rgb(147, 93, 18);
-        font-size: 1.5em
     }
-    p{
-        line-height: 1.5;
-        font-size: 1.2em;
-        color: white
+    h2 {
+      color: rgb(147, 93, 18);
+      font-size: 1.5em;
+    }
+    p {
+      line-height: 1.5;
+      font-size: 1.2em;
+      color: white;
     }
   }
 }

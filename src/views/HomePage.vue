@@ -30,6 +30,15 @@ export default {
     PageFooter,
     SocialIcons,
   },
+  methods: {
+    hide_content(event) {
+      event = document.getElementById("hi");
+      event.style.display = "none";
+    },
+  },
+  mounted() {
+    this.$root.$on("hide_content", this.hide_content);
+  },
 };
 </script>
 

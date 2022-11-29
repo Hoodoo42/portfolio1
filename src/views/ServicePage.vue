@@ -1,47 +1,48 @@
 <template>
   <div>
     <page-header></page-header>
+    <div id="container">
+      <h1>My Craft</h1>
 
-    <h1>My Craft</h1>
-
-    <p>
-      I have had a chance at exploring many aspects of web development. Recently
-      graduating from an accelerated diploma program on full-stack development.
-      Here are some of the skills I have focused on.
-    </p>
-    <div id="skills">
-      <section id="fe">
-        <h1>Front-End</h1>
-        <ul>
-          <li>HTML</li>
-          <li>S/CSS</li>
-          <li>Javascript</li>
-        </ul>
-        <h3>Frameworks</h3>
-        <ul>
-          <li>Vue.js</li>
-          <li>Phaser</li>
-        </ul>
-      </section>
-      <section id="be">
-        <h1>Back-End</h1>
-        <ul>
-          <li>APis</li>
-          <li>Axios</li>
-        </ul>
-      </section>
-      <section id="ss">
-        <h1>Server-Side</h1>
-        <ul>
-          <li>Python</li>
-          <li>SQL</li>
-          <li>MariaDB (DBMS)</li>
-        </ul>
-        <h3>Frameworks</h3>
-        <ul>
-          <li>Flask</li>
-        </ul>
-      </section>
+      <p>
+        I have had a chance at exploring many aspects of web development.
+        Recently graduating from an accelerated diploma program on full-stack
+        development. Here are some of the skills I have focused on.
+      </p>
+      <div id="skills">
+        <section id="fe">
+          <h1>Front-End</h1>
+          <ul>
+            <li>HTML</li>
+            <li>S/CSS</li>
+            <li>Javascript</li>
+          </ul>
+          <h3>Frameworks</h3>
+          <ul>
+            <li>Vue.js</li>
+            <li>Phaser</li>
+          </ul>
+        </section>
+        <section id="be">
+          <h1>Back-End</h1>
+          <ul>
+            <li>APis</li>
+            <li>Axios</li>
+          </ul>
+        </section>
+        <section id="ss">
+          <h1>Server-Side</h1>
+          <ul>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>MariaDB (DBMS)</li>
+          </ul>
+          <h3>Frameworks</h3>
+          <ul>
+            <li>Flask</li>
+          </ul>
+        </section>
+      </div>
     </div>
     <page-footer></page-footer>
   </div>
@@ -54,6 +55,15 @@ export default {
   components: {
     PageHeader,
     PageFooter,
+  },
+  methods: {
+    hide_content(event) {
+      event = document.getElementById("container");
+      event.style.display = "none";
+    },
+  },
+  mounted() {
+    this.$root.$on("hide_content", this.hide_content);
   },
 };
 </script>

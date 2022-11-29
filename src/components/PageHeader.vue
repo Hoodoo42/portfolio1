@@ -19,15 +19,17 @@
       id="ham"
       @click="open_menu"
       src="@/assets/hamburger.png"
-      alt="3 goldish lines stacked"
+      alt="menu bars"
     />
     <!-- mobile nav -->
-    <nav id="mobile_nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About Me</router-link>
-      <router-link to="/portfolio">My Work</router-link>
-      <router-link to="/service">My Craft</router-link>
-    </nav>
+    <div id="mobile_container">
+      <nav id="mobile_nav">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About Me</router-link>
+        <router-link to="/portfolio">My Work</router-link>
+        <router-link to="/service">My Craft</router-link>
+      </nav>
+    </div>
   </div>
 </template>
 
@@ -43,10 +45,10 @@ export default {
     open_menu() {
       let ham = document.getElementById("ham");
       ham.style.display = "none";
-      let nav = document.getElementById("mobile_nav");
+      let nav = document.getElementById("mobile_container");
       nav.style.display = "grid";
 
-      this.$root.$on
+      this.$root.$emit("hide_content", this.event);
     },
   },
 };
@@ -56,24 +58,29 @@ export default {
 #desktop_nav {
   display: none;
 }
+
 div {
   place-items: center;
   text-align: center;
 
-  > #mobile_nav {
-    // display: grid;
-    grid-template-rows: auto;
-    width: 100%;
-    row-gap: 20px;
-    font-size: 2rem;
-    background-color: rgb(29, 51, 55);
+  > #mobile_container {
     display: none;
-    > a,
-    a:link,
-    a:visited {
-      text-decoration: none;
-      color: white;
-      padding: 10px;
+    height: 50vh;
+    > #mobile_nav {
+      display: grid;
+      grid-template-rows: auto;
+      width: 100%;
+      row-gap: 20px;
+      font-size: 2rem;
+      background-color: rgb(29, 51, 55);
+      
+      > a,
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+      }
     }
   }
 

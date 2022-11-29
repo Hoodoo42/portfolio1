@@ -39,6 +39,16 @@ export default {
     PageHeader,
     PageFooter,
   },
+
+  methods: {
+    hide_content(event) {
+      event = document.getElementById("about");
+      event.style.display = "none";
+    },
+  },
+  mounted() {
+    this.$root.$on("hide_content", this.hide_content);
+  },
 };
 </script>
 
@@ -57,12 +67,10 @@ div {
     line-height: 1.5;
   }
   > #about {
-    height: 100vh;
     width: 70%;
     position: relative;
     left: 15%;
   }
-
 }
 </style>
 

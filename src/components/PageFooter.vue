@@ -28,6 +28,5 @@ section {
   > a {
     justify-self: left;
   }
-
 }
 </style>

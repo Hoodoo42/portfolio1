@@ -57,8 +57,8 @@ export default {
   place-items: center;
 
   > img {
-    width: 30%;
-    height: 70%;
+    width: 35px;
+    height: 35px;
     padding: 5px;
   }
 }
@@ -68,7 +68,7 @@ export default {
 @media only screen and (min-width: 600px) {
   #socials {
     > img {
-      width: 35%;
+      width: 40px;
     }
   }
 
